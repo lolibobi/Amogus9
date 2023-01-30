@@ -132,6 +132,8 @@ async def on_message(message: disnake.Message) -> None:
         await message.channel.send('https://tenor.com/bnHle.gif')
     if 'мяу' in message.content.lower().split():
         await message.channel.send('КТО МЯУКАЕТ???')
+    if 'спокойной ночи' in message.content.lower().split():
+        await message.channel.send('Споки! Мяу.')
 
 
     await bot.process_commands(message)
