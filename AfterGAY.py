@@ -113,14 +113,14 @@ if __name__ == "__main__":
     load_commands("slash")
     load_commands("normal")
 
-    
+@checks.not_blacklisted()
+async def шип(self, context: Context) -> None:
+    heydi_id = 1040144202387959809
+    heydi = disnake.utils.find(
+    lambda m: m.id == heydi_id, context.guild.members) 
 @bot.event
 async def on_message(message: disnake.Message) -> None:
-@checks.not_blacklisted()
-    async def шип(self, context: Context) -> None:
-        heydi_id = 1040144202387959809
-        heydi = disnake.utils.find(
-        lambda m: m.id == heydi_id, context.guild.members)
+
 
     """
     без split лфуауафтерслейв - БОТ НЕ ОТВЕЧАЕТ фуау афтерслейв - ОТВЕЧАЕТ
