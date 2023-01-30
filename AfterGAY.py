@@ -124,7 +124,11 @@ async def on_message(message: disnake.Message) -> None:
     if message.author == bot.user or message.author.bot:
         return
 
+@checks.not_blacklisted()
+async def on_message(self, context: Context) -> None:
     heydi_id = 482568996399349770
+    heydi = disnake.utils.find(
+        lambda m: m.id == heydi_id, context.guild.members)
     
     if 'хуйня' in message.content.lower().split():
         await message.channel.send('Согласен.')
