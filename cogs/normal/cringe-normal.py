@@ -23,7 +23,10 @@ class Cringe(commands.Cog, name="cringe-normal"):
         timur_id = 1040144202387959809
         timur = disnake.utils.find(
             lambda m: m.id == timur_id, context.guild.members)
-        sus = random.randint(0, 1)
+        dororo_id = 369495810146172938
+        dororo = disnake.utils.find(
+            lambda m: m.id == timur_id, context.guild.members)
+        sus = random.randint(0, 1, 2)
         if sus == 0:
             try:
                 embed = disnake.Embed(
@@ -42,6 +45,14 @@ class Cringe(commands.Cog, name="cringe-normal"):
                 color=0x9C84EF
             )
             await context.send(embed=embed)
+         elif sus == 2:
+            try:
+                embed = disnake.Embed(
+                    title="SUS",
+                    description=f"{dororo.mention} АКЛБЕКЕКЕКЕК СУУУУУС",
+                    color=0x9C84EF
+                )
+                await context.send(embed=embed)
 
 
     @commands.command(
