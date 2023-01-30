@@ -28,7 +28,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
             try:
                 embed = disnake.Embed(
                     title="SUS",
-                    description=f"{ешьгк.mention} ТЫ ЗАЕБАВ ЮЗАТЬ ЗИС КОМАНД, ПИДАРАСИ",
+                    description=f"{timur.mention} ТЫ ЗАЕБАВ ЮЗАТЬ ЗИС КОМАНД, ПИДАРАСИ",
                     color=0x9C84EF
                 )
                 await context.send(embed=embed)
