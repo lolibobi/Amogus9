@@ -118,7 +118,7 @@ if __name__ == "__main__":
 async def on_message(message: disnake.Message) -> None:
     heydi_id = 482568996399349770
     heydi = disnake.utils.find(
-        lambda m: m.id == heydi_id, message.content.lower)
+        lambda m: m.id == heydi_id, message.guild.members)
     """
     без split лфуауафтерслейв - БОТ НЕ ОТВЕЧАЕТ фуау афтерслейв - ОТВЕЧАЕТ
     без lower = Автерслейв - БОТ НЕ ОТВЕЧАЕТ автерслейв - ОТВЕЧАЕТ
