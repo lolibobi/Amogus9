@@ -16,19 +16,19 @@ class Cringe(commands.Cog, name="cringe-normal"):
     @commands.command(
         name="амогус",
         description="сус",
-        aliases=["amogus"]
+        aliases=["amogus", "сус"]
     )
     @checks.not_blacklisted()
     async def амогус(self, context: Context) -> None:
-        heydi_id = 482568996399349770
-        heydi = disnake.utils.find(
-            lambda m: m.id == heydi_id, context.guild.members)
+        timur_id = 1040144202387959809
+        timur = disnake.utils.find(
+            lambda m: m.id == timur_id, context.guild.members)
         sus = random.randint(0, 1)
         if sus == 0:
             try:
                 embed = disnake.Embed(
                     title="SUS",
-                    description=f"{heydi.mention} is sus",
+                    description=f"{timur.mention} is sus",
                     color=0x9C84EF
                 )
                 await context.send(embed=embed)
@@ -148,7 +148,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
     )
     @checks.not_blacklisted()
     async def шип(self, context: Context) -> None:
-        lolibobi_id = 444421622938730506
+        lolibobi_id = 1040144202387959809
         lolibobi = disnake.utils.find(
         lambda m: m.id == lolibobi_id, context.guild.members)
         heydi_id = 482568996399349770
