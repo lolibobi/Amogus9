@@ -45,7 +45,8 @@ class Cringe(commands.Cog, name="cringe-normal"):
                 color=0x9C84EF
             )
             await context.send(embed=embed)
-         elif sus == 2:
+        elif sus == 2:
+            user = random.choice(context.guild.members)
             embed = disnake.Embed(
                 title="SUS",
                 description=f"{kok.mention} ЫАВАЫВААЫВАЫВЫВАЫАЫВ",
