@@ -125,7 +125,7 @@ async def on_message(message: disnake.Message) -> None:
 
     heydi_id = 482568996399349770
     heydi = disnake.utils.find(
-        lambda m: m.id == heydi_id, guild.members)
+        lambda m: m.id == heydi_id, channel.guild.members)
     if message.author == bot.user or message.author.bot:
         return
     
