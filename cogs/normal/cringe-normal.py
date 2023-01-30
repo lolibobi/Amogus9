@@ -137,7 +137,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
         user = random.choice(context.guild.members)
         embed = disnake.Embed(
             title="пиписочка",
-            description=f"{user.mention} вы писка",
+            description=f"{user.mention} вы писка :emoji_27:",
             color=0x9C84EF
         )
         await context.send(embed=embed)
