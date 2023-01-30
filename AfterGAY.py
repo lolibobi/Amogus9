@@ -114,8 +114,6 @@ if __name__ == "__main__":
     load_commands("normal")
 
 
-@bot.event
-async def on_message(message: disnake.Message) -> None:
     alisa_id = 482568996399349770
     alisa = disnake.utils.find(
         lambda m: m.id == alisa_id, context.guild.members)
