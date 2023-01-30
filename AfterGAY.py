@@ -136,7 +136,7 @@ async def on_message(message: disnake.Message) -> None:
         await message.channel.send('КТО МЯУКАЕТ???')
     if 'спокойной ночи' in message.content.lower():
         await message.channel.send('Споки! мяу')
-    if '{heydi.mention}' in message.content.lower().split():
+    if {heydi.mention} in message.content.lower().split():
         await message.channel.send('https://tenor.com/view/discord-cat-gif-25588649')
 
 
