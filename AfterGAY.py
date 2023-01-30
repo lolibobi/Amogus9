@@ -116,9 +116,6 @@ if __name__ == "__main__":
     
 @bot.event
 async def on_message(message: disnake.Message) -> None:
-    heydi_id = 482568996399349770
-    heydi = disnake.utils.find(
-            lambda m: m.id == heydi_id, context.guild.members)
     """
     без split лфуауафтерслейв - БОТ НЕ ОТВЕЧАЕТ фуау афтерслейв - ОТВЕЧАЕТ
     без lower = Автерслейв - БОТ НЕ ОТВЕЧАЕТ автерслейв - ОТВЕЧАЕТ
@@ -127,6 +124,10 @@ async def on_message(message: disnake.Message) -> None:
     if message.author == bot.user or message.author.bot:
         return
 
+    heydi_id = 482568996399349770
+    heydi = disnake.utils.find(
+            lambda m: m.id == heydi_id, context.guild.members)
+    
     if 'хуйня' in message.content.lower().split():
         await message.channel.send('Согласен.')
     if 'афтерслейв' in message.content.lower().split():
