@@ -52,7 +52,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
     @checks.not_blacklisted()
     async def рандом(self, context: Context) -> None:
         
-        x = random.randint(0, 100)
+        x = random.randint(0, 1000000)
 
         if x == 0:
             await context.send(x)
