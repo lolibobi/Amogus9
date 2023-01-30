@@ -123,9 +123,7 @@ async def on_message(message: disnake.Message) -> None:
     Код в этом событии выполняется каждый раз, когда кто-то отправляет сообщение, с префиксом или без него
     """
 
-    heydi_id = 482568996399349770
-    heydi = disnake.utils.find(
-        lambda m: m.id == heydi_id)
+
     if message.author == bot.user or message.author.bot:
         return
     
@@ -139,6 +137,9 @@ async def on_message(message: disnake.Message) -> None:
         await message.channel.send('КТО МЯУКАЕТ???')
     if 'спокойной ночи' in message.content.lower():
         await message.channel.send('Споки! мяу')
+    heydi_id = 482568996399349770
+    heydi = disnake.utils.find(
+        lambda m: m.id == heydi_id, context.guild.members)
     if heydi.mention in message.content.lower().split():
         await message.channel.send('https://tenor.com/view/discord-cat-gif-25588649')
 
