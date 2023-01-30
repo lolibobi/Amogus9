@@ -26,7 +26,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
         dororo_id = 369495810146172938
         dororo = disnake.utils.find(
         lambda m: m.id == dororo_id, context.guild.members)
-        sus = random.randint(0, 1, 2)
+        sus = random.randint(0, 2)
         if sus == 0:
             try:
                 embed = disnake.Embed(
