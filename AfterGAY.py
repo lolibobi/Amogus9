@@ -122,7 +122,7 @@ async def on_message(message: disnake.Message) -> None:
     без lower = Автерслейв - БОТ НЕ ОТВЕЧАЕТ автерслейв - ОТВЕЧАЕТ
     Код в этом событии выполняется каждый раз, когда кто-то отправляет сообщение, с префиксом или без него
     """
-@checks.not_blacklisted()
+
 async def on_message(self, context: Context) -> None:
     heydi_id = 482568996399349770
     heydi = disnake.utils.find(
