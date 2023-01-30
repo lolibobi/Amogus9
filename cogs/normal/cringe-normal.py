@@ -37,6 +37,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
                 await context.send(embed=embed)
             except:
                 await context.send('heydi IS SUUUUUUUUUUUUUUUUUUUUUUUUUUUUS!')
+                
         elif sus == 1:
             user = random.choice(context.guild.members)
             embed = disnake.Embed(
@@ -45,6 +46,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
                 color=0x9C84EF
             )
             await context.send(embed=embed)
+            
          elif sus == 2:
             try:
                 embed = disnake.Embed(
