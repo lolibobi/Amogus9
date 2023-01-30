@@ -139,7 +139,7 @@ async def on_message(message: disnake.Message) -> None:
         await message.channel.send('Споки! мяу')
     heydi_id = 482568996399349770
     heydi = disnake.utils.find(
-        lambda m: m.id == heydi_id, message.guild.members)
+        lambda m: m.id == heydi_id, message.content.lower.split)
     if heydi.mention in message.content.lower().split():
         await message.channel.send('https://tenor.com/view/discord-cat-gif-25588649')
 
