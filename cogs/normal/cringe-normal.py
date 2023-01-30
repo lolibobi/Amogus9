@@ -20,15 +20,15 @@ class Cringe(commands.Cog, name="cringe-normal"):
     )
     @checks.not_blacklisted()
     async def амогус(self, context: Context) -> None:
-        heydi_id = 482568996399349770
-        heydi = disnake.utils.find(
-            lambda m: m.id == heydi_id, context.guild.members)
+        timur_id = 1040144202387959809
+        timur = disnake.utils.find(
+            lambda m: m.id == ешьгк_id, context.guild.members)
         sus = random.randint(0, 1)
         if sus == 0:
             try:
                 embed = disnake.Embed(
                     title="SUS",
-                    description=f"{heydi.mention} is sus",
+                    description=f"{ешьгк.mention} ТЫ ЗАЕБАВ ЮЗАТЬ ЗИС КОМАНД, ПИДАРАСИ",
                     color=0x9C84EF
                 )
                 await context.send(embed=embed)
