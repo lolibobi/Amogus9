@@ -25,7 +25,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
             lambda m: m.id == timur_id, context.guild.members)
         dororo_id = 369495810146172938
         dororo = disnake.utils.find(
-            lambda m: m.id == timur_id, context.guild.members)
+            lambda m: m.id == dororo_id, context.guild.members)
         sus = random.randint(0, 1, 2)
         if sus == 0:
             try:
@@ -159,7 +159,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
     )
     @checks.not_blacklisted()
     async def шип(self, context: Context) -> None:
-        lolibobi_id = 444421622938730506
+        lolibobi_id = 1040144202387959809
         lolibobi = disnake.utils.find(
         lambda m: m.id == lolibobi_id, context.guild.members)
         heydi_id = 482568996399349770
