@@ -113,6 +113,8 @@ if __name__ == "__main__":
     load_commands("slash")
     load_commands("normal")
 
+    
+    
 @checks.not_blacklisted()
 async def шип(self, context: Context) -> None:
     heydi_id = 1040144202387959809
