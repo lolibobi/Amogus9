@@ -22,10 +22,10 @@ class Cringe(commands.Cog, name="cringe-normal"):
     async def амогус(self, context: Context) -> None:
         timur_id = 1040144202387959809
         timur = disnake.utils.find(
-            lambda m: m.id == timur_id, context.guild.members)
+        lambda m: m.id == timur_id, context.guild.members)
         dororo_id = 369495810146172938
         dororo = disnake.utils.find(
-            lambda m: m.id == dororo_id, context.guild.members)
+        lambda m: m.id == dororo_id, context.guild.members)
         sus = random.randint(0, 1, 2)
         if sus == 0:
             try:
