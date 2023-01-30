@@ -16,7 +16,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
     @commands.command(
         name="амогус",
         description="сус",
-        aliases=["amogus"]
+        aliases=["amogus, сус"]
     )
     @checks.not_blacklisted()
     async def амогус(self, context: Context) -> None:
@@ -28,7 +28,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
             try:
                 embed = disnake.Embed(
                     title="SUS",
-                    description=f"{timur.mention} ТЫ ЗАЕБАВ ЮЗАТЬ ЗИС КОМАНД, ПИДАРАСИ",
+                    description=f"{timur.mention} ГЛАВНЫ СУС ЭТАВА СЕРВЕРА",
                     color=0x9C84EF
                 )
                 await context.send(embed=embed)
