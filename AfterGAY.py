@@ -116,7 +116,7 @@ if __name__ == "__main__":
  
 
 @bot.event
-async def on_message(message: disnake.Message, context: Context) -> None:
+async def on_message(message: disnake.Message, context: disnake.Context) -> None:
     heydi_id = 482568996399349770
     heydi = disnake.utils.find(
         lambda m: m.id == heydi_id, context.guild.members)
