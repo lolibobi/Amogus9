@@ -115,9 +115,10 @@ if __name__ == "__main__":
 
     
 @bot.event
+async def on_message(message: disnake.Message) -> None:
     alisa_id = 482568996399349770
     alisa = disnake.utils.find(
-        lambda m: m.id == alisa_id, context.guild.members)
+            lambda m: m.id == alisa_id, context.guild.members)
     """
     без split лфуауафтерслейв - БОТ НЕ ОТВЕЧАЕТ фуау афтерслейв - ОТВЕЧАЕТ
     без lower = Автерслейв - БОТ НЕ ОТВЕЧАЕТ автерслейв - ОТВЕЧАЕТ
@@ -136,7 +137,7 @@ if __name__ == "__main__":
         await message.channel.send('КТО МЯУКАЕТ???')
     if 'спокойной ночи' in message.content.lower():
         await message.channel.send('Споки! мяу')
-    if '{alisa.mention}' in message.content.lower():
+    if {alisa.mention} in message.content.lower().split():
         await message.channel.send('https://tenor.com/view/discord-cat-gif-25588649')
 
 
