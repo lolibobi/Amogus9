@@ -129,7 +129,7 @@ async def on_message(message: disnake.Message) -> None:
     if 'афтерслейв' in message.content.lower().split():
         await message.channel.send('нани?')
     if 'гм' in message.content.lower().split():
-        await message.channel.send('https://tenor.com/bnHle.gif')
+        await message.channel.send('https://tenor.com/view/arthas-%D0%BF%D0%B0%D0%BF%D0%B8%D1%87-axe-gif-22493188')
     if 'мяу' in message.content.lower().split():
         await message.channel.send('КТО МЯУКАЕТ???')
     if 'спокойной ночи' in message.content.lower():
