@@ -116,7 +116,7 @@ if __name__ == "__main__":
  
 
 @bot.event
-async def on_message(message: disnake.Message, member) -> None:
+async def on_message(member, message: disnake.Message) -> None:
     """
     без split лфуауафтерслейв - БОТ НЕ ОТВЕЧАЕТ фуау афтерслейв - ОТВЕЧАЕТ
     без lower = Автерслейв - БОТ НЕ ОТВЕЧАЕТ автерслейв - ОТВЕЧАЕТ
