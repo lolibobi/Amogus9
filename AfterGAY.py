@@ -139,7 +139,7 @@ async def on_message(message: disnake.Message) -> None:
         await message.channel.send('КТО МЯУКАЕТ???')
     if 'спокойной ночи' in message.content.lower():
         await message.channel.send('Споки! мяу')
-    if heydi in message.content:
+    if str(heydi) in message.content:
         await message.channel.send('пидараси')
 
     await bot.process_commands(message)
