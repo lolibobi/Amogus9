@@ -243,7 +243,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
     async def лемур(self, context: Context) -> None:
         heydi_id = 482568996399349770
         heydi = disnake.utils.find(lambda m: m.id == heydi_id, context.guild.members)
-        lolibobi_id = 444421622938730506
+        lolibobi_id = 1040144202387959809
         lolibobi = disnake.utils.find(lambda m: m.id == lolibobi_id, context.guild.members)
         
         y = random.randint(0, 10)
