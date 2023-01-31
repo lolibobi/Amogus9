@@ -237,7 +237,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
     @commands.command(
         name="лемур",
         description="донт придумала",
-        aliases=["лемур", "лимур"]
+        aliases=["лимур"]
     )
     @checks.not_blacklisted()
     async def лемур(self, context: Context) -> None:
