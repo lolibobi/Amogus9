@@ -142,10 +142,10 @@ async def on_message(message: disnake.Message) -> None:
     await bot.process_commands(message)
 
 @bot.event
-async def on_message(message: disnake.Message, member.mention) -> None:
+async def on_message(message: disnake.Message, member.mentions) -> None:
     heydi_id = 482568996399349770
     heydi = disnake.utils.find(
-            lambda m: m.id == heydi_id, member.mention)
+            lambda m: m.id == heydi_id, member.mentions)
     if heydi.mention in message.content.lower():
         await message.channel.send('УРА У ТЯ ПОЛУЧИЛАСЬ СУСИК')
     
