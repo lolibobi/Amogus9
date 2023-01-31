@@ -142,7 +142,7 @@ async def on_message(message: disnake.Message) -> None:
     await bot.process_commands(message)
 
 @bot.event
-async def on_message(message: disnake.Message, mentions) -> None:
+async def on_message(message: disnake.Message, mention_everyone) -> None:
     heydi_id = 482568996399349770
     heydi = disnake.utils.find(
         lambda m: m.id == heydi_id, context.guild.members)
