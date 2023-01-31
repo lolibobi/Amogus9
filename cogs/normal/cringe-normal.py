@@ -265,12 +265,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
             await context.send(embed=embed)
             
         if x == y:
-            embed = disnake.Embed(
-                title="ОПАЧА",
-                description=f'https://tenor.com/view/playful-play-dead-acting-pet-lemur-gif-13337152',
-                color=0xE02B2B
-            )
-            await context.send(embed=embed)
+            await message.channel.send('https://tenor.com/view/playful-play-dead-acting-pet-lemur-gif-13337152')
         
 def setup(bot):
     bot.add_cog(Cringe(bot))
