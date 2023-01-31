@@ -141,6 +141,14 @@ async def on_message(message: disnake.Message) -> None:
 
     await bot.process_commands(message)
 
+@bot.event
+async def on_message(message: disnake.Message, member.mention) -> None:
+    heydi_id = 482568996399349770
+    heydi = disnake.utils.find(
+            lambda m: m.id == heydi_id, member.mention)
+    if heydi.mention in message.content.lower():
+        await message.channel.send('УРА У ТЯ ПОЛУЧИЛАСЬ СУСИК')
+    
     
 @bot.event
 async def on_member_join(member):
