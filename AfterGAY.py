@@ -116,10 +116,7 @@ if __name__ == "__main__":
  
 
 @bot.event
-async def on_message(message: disnake.Message, mentions: list[abs.heydi]) -> None:
-    heydi_id = 482568996399349770
-    heydi = disnake.utils.find(
-        lambda m: m.id == heydi_id, context.guild.members)
+async def on_message(message: disnake.Message) -> None:
     """
     без split лфуауафтерслейв - БОТ НЕ ОТВЕЧАЕТ фуау афтерслейв - ОТВЕЧАЕТ
     без lower = Автерслейв - БОТ НЕ ОТВЕЧАЕТ автерслейв - ОТВЕЧАЕТ
@@ -140,12 +137,18 @@ async def on_message(message: disnake.Message, mentions: list[abs.heydi]) -> Non
         await message.channel.send('КТО МЯУКАЕТ???')
     if 'спокойной ночи' in message.content.lower():
         await message.channel.send('Споки! мяу')
-    if heydi.mention in message.content.lower().split():
-        await message.channel.send('https://tenor.com/view/discord-cat-gif-25588649')
 
 
     await bot.process_commands(message)
 
+@bot.event
+async def on_message(message: disnake.Message, mentions) -> None:
+    heydi_id = 482568996399349770
+    heydi = disnake.utils.find(
+        lambda m: m.id == heydi_id, context.guild.members)
+    if mention_everyone in message.content:
+        await message.channel.send('https://tenor.com/view/discord-cat-gif-25588649')
+    
 @bot.event
 async def on_member_join(member):
 
