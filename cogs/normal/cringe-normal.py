@@ -234,6 +234,43 @@ class Cringe(commands.Cog, name="cringe-normal"):
             )
             await context.send(embed=embed)
             
+    @commands.command(
+        name="лемур",
+        description="донт придумала",
+        aliases=["лемур", "лимур"]
+    )
+    @checks.not_blacklisted()
+    async def лемур(self, context: Context) -> None:
+        heydi_id = 482568996399349770
+        heydi = disnake.utils.find(lambda m: m.id == heydi_id, context.guild.members)
+        lolibobi_id = 444421622938730506
+        lolibobi = disnake.utils.find(lambda m: m.id == lolibobi_id, context.guild.members)
+        
+        y = random.randint(0, 10)
+        x = random.randint(0, 10)
+        if x > y:
+            embed = disnake.Embed(
+                title="лемур"
+                description=f'Тимур лимур',
+                color=0xE02B2B
+            )
+            await context.send(embed=embed)
+            
+        if x < y:
+            embed = disnake.Embed(
+                title="алисо"
+                description=f'{heydi.mention} опа а ты лимур',
+                color=0xE02B2B
+            )
+            await context.send(embed=embed)
+            
+        if x = y:
+            embed = disnake.Embed(
+                title="ОПАЧА"
+                description=f'{heydi.mention} + {lolibobi.mention}',
+                color=0xE02B2B
+            )
+            await context.send(embed=embed)
         
 def setup(bot):
     bot.add_cog(Cringe(bot))
