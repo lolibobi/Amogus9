@@ -250,15 +250,15 @@ class Cringe(commands.Cog, name="cringe-normal"):
         x = random.randint(0, 10)
         if x > y:
             embed = disnake.Embed(
-                title="лемур",
-                description=f'Тимур лимур',
+                title="Тимур",
+                description=f'{lolibobi.mention} а ты лимур',
                 color=0xE02B2B
             )
             await context.send(embed=embed)
             
         if x < y:
             embed = disnake.Embed(
-                title="алисо",
+                title="Алисо",
                 description=f'{heydi.mention} опа а ты лимур',
                 color=0xE02B2B
             )
@@ -267,7 +267,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
         if x == y:
             embed = disnake.Embed(
                 title="ОПАЧА",
-                description=f'{heydi.mention} + {lolibobi.mention}',
+                description=f'{heydi.mention} + {lolibobi.mention} А ВЫ ЛЕМУРЫ ДА',
                 color=0xE02B2B
             )
             await context.send(embed=embed)
