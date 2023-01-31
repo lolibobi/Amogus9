@@ -124,8 +124,8 @@ async def on_message(message: disnake.Message) -> None:
     """
 
 
-    if message.author == bot.user or message.author.bot:
-        return
+#    if message.author == bot.user or message.author.bot:
+#        return
     
     if 'хуйня' in message.content.lower().split():
         await message.channel.send('Согласен.')
@@ -136,7 +136,7 @@ async def on_message(message: disnake.Message) -> None:
     if 'мяу' in message.content.lower().split():
         await message.channel.send('КТО МЯУКАЕТ???')
     if 'спокойной ночи' in message.content.lower():
-        await message.channel.send('Споки! :emoji_24:')
+        await message.channel.send('Споки! мяу')
 
     await bot.process_commands(message)
    
