@@ -142,9 +142,9 @@ async def on_message(message: disnake.Message) -> None:
     await bot.process_commands(message)
 
 @bot.event
-async def on_message(mentions) -> None:
+async def on_message(message: disnake.Message) -> None:
     heydi_id = 482568996399349770
-    if '{heydi.mention}' in message.content.lower().split():
+    if heydi.mention in message.content.lower().split():
         await message.channel.send('УРА У ТЯ ПОЛУЧИЛАСЬ СУСИК')
     
     
