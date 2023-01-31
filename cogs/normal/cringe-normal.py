@@ -267,7 +267,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
         if x == y:
             embed = disnake.Embed(
                 title="ОПАЧА",
-                description=f'{heydi.mention} + {lolibobi.mention} А ВЫ ЛЕМУРЫ ДА',
+                description=f'https://tenor.com/view/playful-play-dead-acting-pet-lemur-gif-13337152',
                 color=0xE02B2B
             )
             await context.send(embed=embed)
