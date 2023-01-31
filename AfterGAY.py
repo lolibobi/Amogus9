@@ -9,7 +9,6 @@ from disnake import ApplicationCommandInteraction
 from disnake.ext import tasks, commands
 from disnake.ext.commands import Bot
 from disnake.ext.commands import Context
-from disnake.ext.commands import Mentions
 
 import exceptions
 
