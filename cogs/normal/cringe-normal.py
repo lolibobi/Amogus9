@@ -252,7 +252,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
             embed = disnake.Embed(
                 title="Тимур",
                 description=f'{lolibobi.mention} а ты лимур',
-                color=0xE02B2B
+                color=0x00FFFF
             )
             await context.send(embed=embed)
             
@@ -260,7 +260,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
             embed = disnake.Embed(
                 title="Алисо",
                 description=f'{heydi.mention} опа а ты лимур',
-                color=0xE02B2B
+                color=0x00FFFF
             )
             await context.send(embed=embed)
             
@@ -268,7 +268,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
             embed = disnake.Embed(
                 title="ОПАЧА",
                 description=f'https://tenor.com/view/playful-play-dead-acting-pet-lemur-gif-13337152',
-                color=0xE02B2B
+                color=0x00FFFF
             )
             await context.send(embed=embed)
         
