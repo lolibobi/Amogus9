@@ -233,6 +233,21 @@ class Cringe(commands.Cog, name="cringe-normal"):
                 color=0x9C84EF
             )
             await context.send(embed=embed)
-
+            
+    @commands.command(
+        name="лемур",
+        description="Пока не придумаля",
+        aliases = ["лемур", "лимур",]
+    )
+    @checks.not_blacklisted()
+    async def лемур(self, context: Context) -> None:
+        user = 482568996399349770
+        embed = disnake.Embed(
+            title="чо я наделола",
+            description=f"{user.mention} ебанутоя",
+            color=0x9C84EF
+        )
+        await context.send(embed=embed)
+        
 def setup(bot):
     bot.add_cog(Cringe(bot))
