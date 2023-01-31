@@ -270,7 +270,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
                 description=f'https://tenor.com/view/playful-play-dead-acting-pet-lemur-gif-13337152',
                 color=0xE02B2B
             )
-            await context.send(embed=embed))
+            await context.send(embed=embed)
         
 def setup(bot):
     bot.add_cog(Cringe(bot))
