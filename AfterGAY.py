@@ -137,17 +137,9 @@ async def on_message(message: disnake.Message) -> None:
         await message.channel.send('КТО МЯУКАЕТ???')
     if 'спокойной ночи' in message.content.lower():
         await message.channel.send('Споки! мяу')
-    heydi_id = 482568996399349770
-    heydi = disnake.utils.find(lambda m: m.id == heydi_id, message.guild.members)
-    if message.heydi in message.content.lower():
-        await message.channel.send('УРА У ТЯ ПОЛУЧИЛАСЬ СУСИК')
 
     await bot.process_commands(message)
-
-#@bot.event
-#async def on_message(message: disnake.Message) -> None:
-    
-    
+   
     
 @bot.event
 async def on_member_join(member):
