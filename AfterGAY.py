@@ -155,9 +155,9 @@ async def on_member_join(member):
     # chanSend = 774511321777438740
     # roleJoin = 479532966486212610
 
-    channel = bot.get_channel(1062310306140917791)
+    channel = bot.get_channel(1062310306140917794)
 
-    role = disnake.utils.get(member.guild.roles, id = 723515028262879292)
+    role = disnake.utils.get(member.guild.roles, id = 1062310825685160017)
     await member.add_roles(role)
     embed = disnake.Embed(
         title = 'Присоединился',
@@ -173,7 +173,7 @@ async def on_member_join(member):
 
 @bot.event
 async def on_member_remove(member):
-    channel = bot.get_channel(1062310306140917791)
+    channel = bot.get_channel(1062310306140917794)
     
     embed = disnake.Embed(
         title = 'Вышел',
