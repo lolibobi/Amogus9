@@ -264,7 +264,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
             )
             await context.send(embed=embed)
             
-        if x = y:
+        if x == y:
             embed = disnake.Embed(
                 title="ОПАЧА",
                 description=f'{heydi.mention} + {lolibobi.mention}',
