@@ -141,13 +141,13 @@ async def on_message(message: disnake.Message) -> None:
 
     await bot.process_commands(message)
 
-@bot.event
-async def on_message(message: disnake.Message, mention_everyone) -> None:
-    heydi_id = 482568996399349770
-    heydi = disnake.utils.find(
-        lambda m: m.id == heydi_id, context.guild.members)
-    if mention_everyone in message.content:
-        await message.channel.send('https://tenor.com/view/discord-cat-gif-25588649')
+# @bot.event
+# async def on_message(message: disnake.Message, mention_everyone) -> None:
+#    heydi_id = 482568996399349770
+#    heydi = disnake.utils.find(
+#        lambda m: m.id == heydi_id, context.guild.members)
+#    if mention_everyone in message.content:
+#        await message.channel.send('https://tenor.com/view/discord-cat-gif-25588649')
     
 @bot.event
 async def on_member_join(member):
