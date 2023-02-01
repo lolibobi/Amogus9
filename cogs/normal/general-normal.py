@@ -23,7 +23,7 @@ class General(commands.Cog, name="general-normal"):
     async def ботинфо(self, context: Context) -> None:
 
         embed = disnake.Embed(
-            description="[Тимур](https://heydi-is-sus), здорова",
+            description="[Алиса](https://heydi-is-sus), здорова",
             color=0x9C84EF
         )
         embed.set_author(
@@ -31,7 +31,7 @@ class General(commands.Cog, name="general-normal"):
         )
         embed.add_field(
             name="Павелител:",
-            value="lolibobi#1235",
+            value="Chisu#4334",
             inline=True
         )
         embed.add_field(
@@ -103,6 +103,11 @@ class General(commands.Cog, name="general-normal"):
             name=f"{self.bot.config['prefix']}переводчик(тр/т)",
             value=f'Перевод от гугол переводчика: ;т ru/eng (слово)"',
             inline=False
+        )
+        embed.add_field(
+            name=f"{self.bot.config['prefix']}лемур",
+            value=f'показать лемуров"',
+            inline=True
         )
         embed.set_footer(
             text=f"Вызвал {context.author}"
