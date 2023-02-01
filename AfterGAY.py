@@ -86,7 +86,7 @@ async def status_task() -> None:
     """
     statuses = ["пездец", "хуню", "Heydi is SUS!", "Трах нест",
     "амосус", "сус", "гей пати", "чин чан чон чи", "смысл бытия",
-    "жизнь", "доме", "сарае", "докторку", "блять что еще написать сюда",
+    "жизнь", "в доме", "в сарае", "в дурке", "блять что еще написать сюда",
     "лан все, я заебался"]
     #await bot.change_presence(activity=disnake.Game(random.choice(statuses)))
     await bot.change_presence(activity=disnake.Activity(type=disnake.ActivityType.listening, name=random.choice(statuses)))
@@ -124,12 +124,12 @@ async def on_message(message: disnake.Message) -> None:
     """
 
 
-#    if message.author == bot.user or message.author.bot:
-#        return
+    if message.author == bot.user or message.author.bot:
+        return
     
     if 'хуйня' in message.content.lower().split():
         await message.channel.send('Согласен.')
-    if 'афтерслейв' in message.content.lower().split():
+    if 'амогус' in message.content.lower().split():
         await message.channel.send('нани?')
     if 'гм' in message.content.lower().split():
         await message.channel.send('https://tenor.com/view/arthas-%D0%BF%D0%B0%D0%BF%D0%B8%D1%87-axe-gif-22493188')
