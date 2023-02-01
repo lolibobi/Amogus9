@@ -101,12 +101,12 @@ class General(commands.Cog, name="general-normal"):
         )
         embed.add_field(
             name=f"{self.bot.config['prefix']}переводчик(тр/т)",
-            value=f'Перевод от гугол переводчика: ;т ru/eng (слово)"',
+            value=f'Перевод от гугол переводчика: ;т ru/eng (слово)',
             inline=False
         )
         embed.add_field(
             name=f"{self.bot.config['prefix']}лемур",
-            value=f'показать лемуров"',
+            value=f'показать лемуров',
             inline=True
         )
         embed.set_footer(
