@@ -70,11 +70,6 @@ class General(commands.Cog, name="general-normal"):
             inline=True
         )
         embed.add_field(
-            name=f"{self.bot.config['prefix']}амогус",
-            value="СУС",
-            inline=True
-        )
-        embed.add_field(
             name=f"{self.bot.config['prefix']}монетка",
             value="Игра в манетачку палучаеца, проста попробуй",
             inline=True
@@ -100,14 +95,19 @@ class General(commands.Cog, name="general-normal"):
             inline=True
         )
         embed.add_field(
-            name=f"{self.bot.config['prefix']}переводчик(тр/т)",
-            value=f'Перевод от гугол переводчика: ;т ru/eng (слово)',
-            inline=False
-        )
-        embed.add_field(
             name=f"{self.bot.config['prefix']}лемур",
             value=f'показать лемуров',
             inline=True
+        )
+        embed.add_field(
+            name=f"{self.bot.config['prefix']}амогус",
+            value="СУС",
+            inline=True
+        )
+        embed.add_field(
+            name=f"{self.bot.config['prefix']}переводчик(тр/т)",
+            value=f'Перевод от гугол переводчика: ;т ru/eng (слово)',
+            inline=False
         )
         embed.set_footer(
             text=f"Вызвал {context.author}"
