@@ -87,7 +87,7 @@ class General(commands.Cog, name="general-normal"):
         embed.add_field(
             name=f"{self.bot.config['prefix']}вы",
             value="писка",
-            inline=True
+            inline=False
         )
         embed.add_field(
             name=f"{self.bot.config['prefix']}шип",
