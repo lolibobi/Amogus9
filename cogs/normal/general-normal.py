@@ -45,11 +45,6 @@ class General(commands.Cog, name="general-normal"):
             inline=False
         )
         embed.add_field(
-            name=f"{self.bot.config['prefix']}ответь",
-            value="отвечаю на твои вопрос стопроц точность!",
-            inline=True
-        )
-        embed.add_field(
             name=f"{self.bot.config['prefix']}серверинфо",
             value="Показывает немного (без)полезной информации о сервере",
             inline=True
@@ -85,9 +80,14 @@ class General(commands.Cog, name="general-normal"):
             inline=True
         )
         embed.add_field(
+            name=f"{self.bot.config['prefix']}ответь",
+            value="отвечаю на твои вопрос стопроц точность!",
+            inline=True
+        )
+        embed.add_field(
             name=f"{self.bot.config['prefix']}вы",
             value="писка",
-            inline=False
+            inline=True
         )
         embed.add_field(
             name=f"{self.bot.config['prefix']}шип",
