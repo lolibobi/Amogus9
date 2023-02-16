@@ -23,7 +23,7 @@ class Choice(disnake.ui.View):
         self.choice = button.label.lower()
         self.stop()
         
-class Names(disnake.ui.View):
+class Names(disnake.ui.Select):
     def __init__(self):
         
         options = [
