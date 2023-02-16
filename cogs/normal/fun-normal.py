@@ -27,15 +27,19 @@ class Names(disnake.ui.Select):
     def __init__(self):
         
         options = [
-            disnake.SelectOption(
-                label="Алиса"
-            ),
-            disnake.SelectOption(
-                label="Тимур"
-            ),
-            disnake.SelectOption(
-                label="Леонид"
-            ),
+            disnake.SelectOption(label="Акылбек"),
+            disnake.SelectOption(label="Александр"),
+            disnake.SelectOption(label="Алиса"),
+            disnake.SelectOption(label="Анастасия"),
+            disnake.SelectOption(label="Андрей"),
+            disnake.SelectOption(label="Владимир"),
+            disnake.SelectOption(label="Владислав"),
+            disnake.SelectOption(label="Даниил"),
+            disnake.SelectOption(label="Денис"),
+            disnake.SelectOption(label="Егор"),
+            disnake.SelectOption(label="Леонид"),
+            disnake.SelectOption(label="Олег"),
+            disnake.SelectOption(label="Темирхан"),
         ]
         
         super().__init__(
@@ -48,9 +52,19 @@ class Names(disnake.ui.Select):
         
     async def callback(self, interaction: disnake.MessageInteraction):
         choices = {
-            "алиса": 0,
-            "тимур": 1,
-            "леонид": 2,
+            "акылбек": 0,
+            "александр": 1,
+            "алиса": 2,
+            "анастасия": 3,
+            "андрей": 4,
+            "владимир": 5,
+            "владислав": 6,
+            "даниил": 7,
+            "денис": 8,
+            "егор": 9,
+            "леонид": 10,
+            "олег": 11,
+            "темирхан": 12,
         }
         user_choice = self.values[0].lower()
         user_choice_index = choices[user_choice]
@@ -59,25 +73,43 @@ class Names(disnake.ui.Select):
         result_embed.set_author(name="Значение этого кокного имени")
         
         if user_choice_index == 0:
-            result_embed.description = "**Женское имя Алиса**\nЖенское имя Алиса является сокращённой формой имени Adelaide (фр. Adelaide), \
-в свою очередь представляющего собой французский вариант древнегерманского имени Adalheid (Adelheid, Adelheidis). Это сложное \
-слово включает два корня: adal (благородный, знатный) и heid (вид, род, образ). Таким образом, имя Adalheid означает не что \
-иное, как «благородная видом», «благородная происхождением» или же просто «благородство». Такое же значение, с определённой \
-эмоциональной окраской, можно признать и за именем Алиса. Существуют гипотезы о связи имени Алиса с греческим женским именем \
-Каллиста, или с греческим же словом aletheia («истина»)."
+            result_embed.description = "**Мужское имя Акылбек**\n"
             result_embed.colour = 0xFFFF00
         elif user_choice_index == 1:
-            result_embed.description = "**Мужское имя Тимур**\nТиму́р (тюрк. Tümür, Demir — «железо») — мужское личное имя тюркского и \
-монгольского происхождения. Это имя означает стойкого, прочного человека. Имя стало знаменитым благодаря \
-полководцу и завоевателю Тимуру (Тамерлану) (1336—1405)."
+            result_embed.description = "**Мужское имя Александр**\n"
             result_embed.colour = 0xFFFF00
         elif user_choice_index == 2:
-            result_embed.description = "**Мужское имя Леонид**\nМужское имя Леонид по происхождению древнегреческое. Образовано \
-от имени Леонидас. Значение звучит как «подобный льву» или «сын льва». Других версий его происхождения не существует. \
-Но зато у этого имени имеются известные родственные имена-синонимы, такие как Лев, Леонтий, Леон. Имя Леонид пользуется \
-неимоверной популярностью в странах СНГ и Европы, как и многие русские имена. Оно обладает хорошей значимостью, а его \
-символика сулит огромное количество отличных качеств характеру именованного. Ассоциируется с большим числом \
-исторических личностей…"
+            result_embed.description = "**Женское имя Алиса**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 3:
+            result_embed.description = "**Женское имя Анастасия**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 4:
+            result_embed.description = "**Мужское имя Андрей**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 5:
+            result_embed.description = "**Мужское имя Владимир**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 6:
+            result_embed.description = "**Мужское имя Владислав**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 7:
+            result_embed.description = "**Мужское имя Даниил**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 8:
+            result_embed.description = "**Мужское имя Денис**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 9:
+            result_embed.description = "**Мужское имя Егор**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 10:
+            result_embed.description = "**Мужское имя Леонид**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 11:
+            result_embed.description = "**Мужское имя Леонид**\n"
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 12:
+            result_embed.description = "**Мужское имя Темирхан**\n"
             result_embed.colour = 0xFFFF00
         await interaction.response.defer()
         await interaction.edit_original_message(embed=result_embed, content=None, view=None)
