@@ -155,34 +155,6 @@ class Fun(commands.Cog, name="fun-normal"):
 
         view = RockPaperScissorsView()
         await context.send("ОКЕИ БАDDICK, ВЫБИРАЙ СВОЙ ВЫБОР", view=view)
-        
-    @commands.command(
-	name="имя",
-	descpirtion="Пояснит за тваё имя"
-    )
-    @checks.not_blacklisted()
-    async def имя(self, context: Context) -> None:
-
-        buttons = Choice()
-        embed = disnake.Embed(
-	description="Выбери имя",
-		color=0x9C84EF
-	)
-        message = await context.send(embed=embed, view=buttons)
-        await buttons.wait()
-        random.choice(["Алиса", "Тимур"])
-        Алиса == x
-        Тимур == y
-        if buttons.choice == x:
-            embed = disnake.Embed(
-                description=f"Женское имя Алиса является сокращённой формой имени Adelaide (фр. Adelaide), в свою очередь представляющего собой французский вариант древнегерманского имени Adalheid (Adelheid, Adelheidis). Это сложное слово включает два корня: adal (благородный, знатный) и heid (вид, род, образ).Таким образом, имя Adalheid означает не что иное, как «благородная видом», «благородная происхождением» или же просто «благородство».Такое же значение, с определённой эмоциональной окраской, можно признать и за именем Алиса. Существуют гипотезы о связи имени Алиса с греческим женским именем Каллиста, или с греческим же словом aletheia («истина»).",
-                color=0x9C84EF
-        elif buttons.choice == y:
-            embed = disnake.Embed(
-                description=f"Мужское имя Тимур по происхождению монгольское.Значение трактуется как «железо». Хотя есть версия, по которой это имя могло произойти от татарского имени Дамир, от которого произошли и многие другие известные национальные имена.К слову, мужское имя Тимур сегодня пользуется неимоверной популярностью в нашей необъятной стране, но что самое главное, так это то, что оно имеет еще и хорошую значимость, и сильную энергетику.А еще имя Тимур совместимо со многими женскими русскими современными именами…",
-                color=0x9C84EF
-		    
-    await message.edit(embed=embed, view=None)
     
 def setup(bot):
     bot.add_cog(Fun(bot))
