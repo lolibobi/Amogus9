@@ -23,6 +23,11 @@ class Choice(disnake.ui.View):
         self.choice = button.label.lower()
         self.stop()
         
+class Choice2(disnake.ui.View):
+    def __init__(self):
+        super().__init__()
+        self.choice = None
+        
     @disnake.ui.button(label="Тимур", style=disnake.ButtonStyle.blurple)
     async def confirm(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
         self.choice = button.label.lower()
@@ -173,7 +178,7 @@ class Fun(commands.Cog, name="fun-normal"):
     @checks.not_blacklisted()
     async def имя(self, context: Context) -> None:
         
-        buttons = Choice()
+        buttons = Choice2()
         embed = disnake.Embed(
             description="Выбери",
             color=0x9C84EF
