@@ -23,25 +23,56 @@ class Choice(disnake.ui.View):
         self.choice = button.label.lower()
         self.stop()
         
-class Choice2(disnake.ui.View):
+class Names(disnake.ui.View):
     def __init__(self):
         super().__init__()
         self.choice = None
         
-    @disnake.ui.button(label="Тимур", style=disnake.ButtonStyle.blurple)
-    async def confirm(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
-        self.choice = button.label.lower()
-        self.stop()
+        options = [
+            disnake.SelectOption(
+                label="Алиса"
+            ),
+            disnake.SelectOption(
+                label="Тимур"
+            ),
+        ]
         
-    @disnake.ui.button(label="Алиса", style=disnake.ButtonStyle.blurple)
-    async def confirm(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
-        self.choice = button.label.lower()
-        self.stop()
+        super().__init__(
+            placeholder="Выбирастинк...",
+            min_values=1,
+            max_values=1,
+            options=options,
+        )
+        
+    async def callback(self, interaction: disnake.MessageInteraction):
+        choices = {
+            "Алиса": 0,
+            "Тимур": 1,
+        }
+        user_choice = self.values[0].lower()
+        user_choice_index = choices[user_choice]
+        
+        result_embed = disnake.Embed(color=0x9C84EF)
+        result_embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
+        
+        if user_choice_index == 0
+            result_embed.description = f"**Женское имя Алиса"**\nЖенское имя Алиса является сокращённой формой имени Adelaide (фр. Adelaide), в свою очередь представляющего собой французский вариант древнегерманского имени Adalheid (Adelheid, Adelheidis). Это сложное слово включает два корня: adal (благородный, знатный) и heid (вид, род, образ). Таким образом, имя Adalheid означает не что иное, как «благородная видом», «благородная происхождением» или же просто «благородство». Такое же значение, с определённой эмоциональной окраской, можно признать и за именем Алиса. Существуют гипотезы о связи имени Алиса с греческим женским именем Каллиста, или с греческим же словом aletheia («истина»)."
+            result_embed.colour = 0xF59E42
+        elif user_choice_index == 1
+            result_embed.description = f"**Мужское имя Тимур"**\nТиму́р (тюрк. Tümür, Demir — «железо») — мужское личное имя тюркского и монгольского происхождения. Это имя означает стойкого, прочного человека. Имя стало знаменитым благодаря полководцу и завоевателю Тимуру (Тамерлану) (1336—1405)."
+            result_embed.colour = 0xF59E42
+        await interaction.response.defer()
+        await interaction.edit_original_message(embed=result_embed, content=None, view=None)
+        
+class NamesView(disnake.ui.View):
+    def __init__(self):
+        super().__init__()
 
-
+        self.add_item(Names())
+        
 class RockPaperScissors(disnake.ui.Select):
     def __init__(self):
-
+        
         options = [
             disnake.SelectOption(
                 label="Камень", description="На вид - как твердая пластмасса.", emoji="🪨"
@@ -176,28 +207,10 @@ class Fun(commands.Cog, name="fun-normal"):
         descriotion="Пояснит за тваё имя"
     )
     @checks.not_blacklisted()
-    async def имя(self, context: Context) -> None:
+    async def names(self, context: Context) -> None:
         
-        buttons = Choice2()
-        embed = disnake.Embed(
-            description="Выбери",
-            color=0x9C84EF
-        )
-        message = await context.send(embed=embed, view=buttons)
-        await buttons.wait()
-        result = buttom.choice(["Тимур", "Алиса"])
-        if buttons.choice == result:
-            embed = disnake.Embed(
-                description=f"Женское имя Алиса является сокращённой формой имени Adelaide (фр. Adelaide), в свою очередь представляющего собой французский вариант древнегерманского имени Adalheid (Adelheid, Adelheidis). Это сложное слово включает два корня: adal (благородный, знатный) и heid (вид, род, образ). Таким образом, имя Adalheid означает не что иное, как «благородная видом», «благородная происхождением» или же просто «благородство». Такое же значение, с определённой эмоциональной окраской, можно признать и за именем Алиса. Существуют гипотезы о связи имени Алиса с греческим женским именем Каллиста, или с греческим же словом aletheia («истина»).",
-                color=0x9C84EF
-            )
-        if buttons.choice == result:
-            embed = disnake.Embed(
-                description=f"Мужское имя Тимур по происхождению монгольское. Значение трактуется как «железо». Хотя есть версия, по которой это имя могло произойти от татарского имени Дамир, от которого произошли и многие другие известные национальные имена. К слову, мужское имя Тимур сегодня пользуется неимоверной популярностью в нашей необъятной стране, но что самое главное, так это то, что оно имеет еще и хорошую значимость, и сильную энергетику. А еще имя Тимур совместимо со многими женскими русскими современными именами…",
-                color=0x9C84EF
-            )
-                
-        await message.edit(embed=embed, view=None)
+        view = NamesView()
+        await context.send("Выбери имя ~~своего краша~~", view=view)
     
 def setup(bot):
     bot.add_cog(Fun(bot))
