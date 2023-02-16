@@ -48,7 +48,8 @@ class Names(disnake.ui.Select):
             "Алиса": 0,
             "Тимур": 1,
         }
-        user_choice_index = choices[user_choice]
+        user_choice = self.values[0].lower()
+        user_choice_index = user_choice
         
         result_embed = disnake.Embed(color=0x9C84EF)
         result_embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
