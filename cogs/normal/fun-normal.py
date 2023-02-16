@@ -45,8 +45,8 @@ class Names(disnake.ui.Select):
         
     async def callback(self, interaction: disnake.MessageInteraction):
         choices = {
-            "Алиса": 0,
-            "Тимур": 1,
+            "алиса": 0,
+            "тимур": 1,
         }
         user_choice = self.values[0].lower()
         user_choice_index = choices[user_choice]
