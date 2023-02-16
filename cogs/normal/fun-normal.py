@@ -22,6 +22,16 @@ class Choice(disnake.ui.View):
     async def cancel(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
         self.choice = button.label.lower()
         self.stop()
+        
+    @disnake.ui.button(label="Тимур", style=disnake.ButtonStyle.blurple)
+    async def confirm(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
+        self.choice = button.label.lower()
+        self.stop()
+        
+    @disnake.ui.button(label="Алиса", style=disnake.ButtonStyle.blurple)
+    async def confirm(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
+        self.choice = button.label.lower()
+        self.stop()
 
 
 class RockPaperScissors(disnake.ui.Select):
@@ -155,6 +165,26 @@ class Fun(commands.Cog, name="fun-normal"):
 
         view = RockPaperScissorsView()
         await context.send("ОКЕИ БАDDICK, ВЫБИРАЙ СВОЙ ВЫБОР", view=view)
+        
+    @commands.command(
+        name="имя",
+        descriotion="Пояснит за тваё имя"
+    )
+    @checks.not_blacklisted()
+    async def имя(self, context: Context) -> None:
+        
+        buttons = Choice()
+        embed = disnake.Embed(
+            description="Выбери",
+            color=0x9C84EF
+        )
+        message = await context.send(embed=embed, view=buttons)
+        if buttons.choice == "Тимур":
+            embed = disnake.Embed(
+                description=f"Мужское имя Тимур по происхождению монгольское. Значение трактуется как «железо». Хотя есть версия, по которой это имя могло произойти от татарского имени Дамир, от которого произошли и многие другие известные национальные имена. К слову, мужское имя Тимур сегодня пользуется неимоверной популярностью в нашей необъятной стране, но что самое главное, так это то, что оно имеет еще и хорошую значимость, и сильную энергетику. А еще имя Тимур совместимо со многими женскими русскими современными именами…",
+                color=0x9C84EF
+                
+        await message.edit(embed=embed, view=None)
     
 def setup(bot):
     bot.add_cog(Fun(bot))
