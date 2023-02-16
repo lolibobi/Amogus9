@@ -159,7 +159,7 @@ class Fun(commands.Cog, name="fun-normal"):
     @commands.command(
 	name="имя",
 	descpirtion="Пояснит за тваё имя"
-)
+    )
 @checks.not_blacklisted()
 async def имя(self, context: Context) -> None:
 
