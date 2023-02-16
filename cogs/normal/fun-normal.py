@@ -33,6 +33,9 @@ class Names(disnake.ui.Select):
             disnake.SelectOption(
                 label="Тимур"
             ),
+            disnake.SelectOption(
+                label="Леонид"
+            ),
         ]
         
         super().__init__(
@@ -47,6 +50,7 @@ class Names(disnake.ui.Select):
         choices = {
             "алиса": 0,
             "тимур": 1,
+            "леонид": 2,
         }
         user_choice = self.values[0].lower()
         user_choice_index = choices[user_choice]
@@ -59,6 +63,9 @@ class Names(disnake.ui.Select):
             result_embed.colour = 0xFFFF00
         elif user_choice_index == 1:
             result_embed.description = f"**Мужское имя Тимур**\nТиму́р (тюрк. Tümür, Demir — «железо») — мужское личное имя тюркского и монгольского происхождения. Это имя означает стойкого, прочного человека. Имя стало знаменитым благодаря полководцу и завоевателю Тимуру (Тамерлану) (1336—1405)."
+            result_embed.colour = 0xFFFF00
+        elif user_choice_index == 2:
+            result_embed.description = f"**Мужское имя Леонид**\nМужское имя Леонид по происхождению древнегреческое. Образовано от имени Леонидас. Значение звучит как «подобный льву» или «сын льва». Других версий его происхождения не существует. Но зато у этого имени имеются известные родственные имена-синонимы, такие как Лев, Леонтий, Леон. Имя Леонид пользуется неимоверной популярностью в странах СНГ и Европы, как и многие русские имена. Оно обладает хорошей значимостью, а его символика сулит огромное количество отличных качеств характеру именованного. Ассоциируется с большим числом исторических личностей…"
             result_embed.colour = 0xFFFF00
         await interaction.response.defer()
         await interaction.edit_original_message(embed=result_embed, content=None, view=None)
