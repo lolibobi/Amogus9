@@ -160,12 +160,12 @@ class Fun(commands.Cog, name="fun-normal"):
 	name="имя",
 	descpirtion="Пояснит за тваё имя"
     )
-@checks.not_blacklisted()
-async def имя(self, context: Context) -> None:
+    @checks.not_blacklisted()
+    async def имя(self, context: Context) -> None:
 
-	buttons = Choice()
-	embed = disnake.Embed(
-		description="Выбери имя",
+        buttons = Choice()
+        embed = disnake.Embed(
+	description="Выбери имя",
 		color=0x9C84EF
 	)
 	message = await context.send(embed=embed, view=buttons)
