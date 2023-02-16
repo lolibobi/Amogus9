@@ -173,7 +173,7 @@ class Fun(commands.Cog, name="fun-normal"):
     @checks.not_blacklisted()
     async def имя(self, context: Context) -> None:
         
-        buttons = Choice("Тимур", "Алиса")
+        buttons = Choice()
         embed = disnake.Embed(
             description="Выбери",
             color=0x9C84EF
