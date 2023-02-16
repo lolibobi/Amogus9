@@ -38,7 +38,7 @@ class Names(disnake.ui.View):
         ]
         
         super().__init__(
-            placeholder="Выбирастинк...",
+            placeholder="Выбрать",
             min_values=1,
             max_values=1,
             options=options,
