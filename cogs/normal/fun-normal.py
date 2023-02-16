@@ -52,14 +52,14 @@ class Names(disnake.ui.Select):
         user_choice_index = choices[user_choice]
         
         result_embed = disnake.Embed(color=0x9C84EF)
-        result_embed.set_author(name="Описание этого ~~краша~~ имени")
+        result_embed.set_author(name="Описание этого имени")
         
         if user_choice_index == 0:
             result_embed.description = f"**Женское имя Алиса**\nЖенское имя Алиса является сокращённой формой имени Adelaide (фр. Adelaide), в свою очередь представляющего собой французский вариант древнегерманского имени Adalheid (Adelheid, Adelheidis). Это сложное слово включает два корня: adal (благородный, знатный) и heid (вид, род, образ). Таким образом, имя Adalheid означает не что иное, как «благородная видом», «благородная происхождением» или же просто «благородство». Такое же значение, с определённой эмоциональной окраской, можно признать и за именем Алиса. Существуют гипотезы о связи имени Алиса с греческим женским именем Каллиста, или с греческим же словом aletheia («истина»)."
-            result_embed.colour = 0xF59E42
+            result_embed.colour = 0xFFFF00
         elif user_choice_index == 1:
             result_embed.description = f"**Мужское имя Тимур**\nТиму́р (тюрк. Tümür, Demir — «железо») — мужское личное имя тюркского и монгольского происхождения. Это имя означает стойкого, прочного человека. Имя стало знаменитым благодаря полководцу и завоевателю Тимуру (Тамерлану) (1336—1405)."
-            result_embed.colour = 0xF59E42
+            result_embed.colour = 0xFFFF00
         await interaction.response.defer()
         await interaction.edit_original_message(embed=result_embed, content=None, view=None)
         
