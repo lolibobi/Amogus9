@@ -25,8 +25,6 @@ class Choice(disnake.ui.View):
         
 class Names(disnake.ui.View):
     def __init__(self):
-        super().__init__()
-        self.choice = None
         
         options = [
             disnake.SelectOption(
@@ -36,6 +34,13 @@ class Names(disnake.ui.View):
                 label="Тимур"
             ),
         ]
+        
+        super().__init__(
+            placeholder="Выбирай",
+            min_values=1,
+            max_values=1,
+            options=options,
+        )
         
         
     async def callback(self, interaction: disnake.MessageInteraction):
