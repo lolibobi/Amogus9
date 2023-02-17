@@ -109,6 +109,17 @@ class NamesView(disnake.ui.View):
         super().__init__()
 
         self.add_item(Names())
+        
+    @commands.command(
+        name="имя",
+        descriotion="Пояснит за тваё имя"
+        )
+    @checks.not_blacklisted()
+    async def names(self, context: Context) -> None:
+        
+        view = NamesView()
+        await context.send("Выбери имя ~~своего краша~~", view=view)
+    
 
 class Alisa(commands.Cog, name="alisa-normal"):
     def __init__(self, bot):
