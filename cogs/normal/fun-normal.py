@@ -155,15 +155,5 @@ class Fun(commands.Cog, name="fun-normal"):
         view = RockPaperScissorsView()
         await context.send("ОКЕИ БАDDICK, ВЫБИРАЙ СВОЙ ВЫБОР", view=view)
         
-    @commands.command(
-        name="имя",
-        descriotion="Пояснит за тваё имя"
-    )
-    @checks.not_blacklisted()
-    async def names(self, context: Context) -> None:
-        
-        view = NamesView()
-        await context.send("Выбери имя ~~своего краша~~", view=view)
-    
 def setup(bot):
     bot.add_cog(Fun(bot))
