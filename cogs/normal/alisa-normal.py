@@ -8,4 +8,4 @@ from disnake.ext.commands import Context
 from helpers import checks
 
 def setup(bot):
-    bot.add_cog(alisa(bot))
+    bot.add_cog(Alisa(bot))
