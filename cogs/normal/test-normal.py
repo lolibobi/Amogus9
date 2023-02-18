@@ -63,8 +63,8 @@ class Test(commands.Cog, name="test-normal"):
         )
         message = await context.send(embed=embed, view=buttons)
         await buttons.wait()
-        result1 = Ответ верный. Маладец. Держи cockфетку.
-        result2 = Неверный ответ!!! Заебошу тяяяя!
+        result1 = "Ответ верный. Маладец. Держи cockфетку."
+        result2 = "Неверный ответ!!! Заебошу тяяяя!"
         
         if vopros == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
