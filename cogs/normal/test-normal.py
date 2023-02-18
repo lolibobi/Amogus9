@@ -50,14 +50,39 @@ class Test(commands.Cog, name="test-normal"):
         descpiption="Амогус задаст тебе вопрос"
     )
     @checks.not_blacklisted()
-    async def questions(self, context: Context) -> None:
-        options = ["Ты сус?", "Я сус?", "Тимур сус?"]
-        choices = random.choice(options)   
-        bot_choice = choices
+    async def вопрос(self, context: Context) -> None:
+        vopros1 = ["Ты сус?", "Я сус?", "Тимур сус?"]
+        vopros2
+        vopros = random.choice(vopros1, vopros2)   
         
-        vopros = bot_choice
+        buttons = Choice()
+        embed = disnake.Embed(
+                title="Вапросик",
+                description="{vopros},",
+                color=0x9C84EF
+        )
+        message = await context.send(embed=embed, view=buttons)
+        await buttons.wait()
+        result1 = ["Ответ верный. Маладец. Держи cockфетку."]
+        result2 = ["неверно"]
         
-        await context.send(vopros)
-        
+    if random.choise == vopros1 and button.choise == confirm
+        embed = disnake.Embed(
+                description= {result1},
+                color=0x9C84EF
+        )
+    if random.choise == vopros2 and button.choise == cancel
+            embed = disnake.Embed(
+                description = {result1},
+                color=0x9C84EF
+        )
+    else:
+        embed = disnake.Embed(
+                description = {result2},
+                color=0xE02B2B
+        )
+        await context.send(embed=embed)
+            
+            
 def setup(bot):
     bot.add_cog(Test(bot))
