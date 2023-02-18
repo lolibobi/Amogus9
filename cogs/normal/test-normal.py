@@ -51,6 +51,7 @@ class Test(commands.Cog, name="test-normal"):
     )
     @checks.not_blacklisted()
     async def вопрос(self, context: Context, interaction: disnake.MessageInteraction) -> None:
+        disnake.Embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
         vopros = random.choice(vopros1 or vopros2)   
@@ -65,9 +66,7 @@ class Test(commands.Cog, name="test-normal"):
         await buttons.wait()
         result1 = "Ответ верный. Маладец. Держи cockфетку."
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
-        
-        disnake.Embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
-        
+         
         if vopros == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
                 name = vopros,
