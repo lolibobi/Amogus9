@@ -66,7 +66,7 @@ class Test(commands.Cog, name="test-normal"):
         result1 = "Ответ верный. Маладец. Держи cockфетку."
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
         
-        disnake.embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
+        disnake.Embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
         
         if vopros == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
