@@ -36,7 +36,7 @@ class Questions(disnake.ui.Select):
         
         result_embed = disnake.Embed(color=0x9C84EF)
         
-        if bot_choice_index == options
+        if bot_choice_index == options:
             result_embed.description = {bot_choice}
         await interaction.response.defer()
         await interaction.edit_original_message(embed=result_embed, content=None, view=None)
