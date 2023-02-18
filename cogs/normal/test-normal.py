@@ -62,9 +62,9 @@ class Test(commands.Cog, name="test-normal"):
                 color=0x9C84EF
         )
         message = await context.send(embed=embed, view=buttons)
-            await buttons.wait()
-            result1 = ["Ответ верный. Маладец. Держи cockфетку."]
-            result2 = ["неверно"]
+        await buttons.wait()
+        result1 = ["Ответ верный. Маладец. Держи cockфетку."]
+        result2 = ["неверно"]
         
         if random.choise == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
