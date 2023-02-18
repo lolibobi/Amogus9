@@ -58,7 +58,7 @@ class Test(commands.Cog, name="test-normal"):
         buttons = Choice()
         embed = disnake.Embed(
                 title="Вапросик",
-                description="{vopros},",
+                description={vopros},
                 color=0x9C84EF
         )
         message = await context.send(embed=embed, view=buttons)
