@@ -65,24 +65,23 @@ class Test(commands.Cog, name="test-normal"):
         await buttons.wait()
         result1 = "Ответ верный. Маладец. Держи cockфетку."
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
-        embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
         
         if vopros == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
-                name = vopros
-                description="`{result1}`, твой ответ был:`{button.choise}`",
+                name = interaction.author.display_name, icon_url=interaction.author.avatar.url
+                description="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
         if vopros == vopros2 and button.choise == cancel:
             embed = disnake.Embed(
-                name = vopros
-                description ="`{result1}`, твой ответ был:`{button.choise}`",
+                name = interaction.author.display_name, icon_url=interaction.author.avatar.url
+                description ="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
         else:
             embed = disnake.Embed(
-                name = vopros
-                description ="`{result2}`, твой ответ был:`{button.choise}`",
+                name = interaction.author.display_name, icon_url=interaction.author.avatar.url
+                description ="`{result2}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0xE02B2B
             )
         await message.edit(embed=embed, view=None)
