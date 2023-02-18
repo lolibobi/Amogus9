@@ -23,7 +23,7 @@ class Names(disnake.ui.Select):
             disnake.SelectOption(label="Егор"),
             disnake.SelectOption(label="Леонид"),
             disnake.SelectOption(label="Олег"),
-            disnake.SelectOption(label="Темирхан"),
+            disnake.SelectOption(label="Тимур"),
         ]
         
         super().__init__(
@@ -48,7 +48,7 @@ class Names(disnake.ui.Select):
             "егор": 9,
             "леонид": 10,
             "олег": 11,
-            "темирхан": 12,
+            "тимур": 12,
         }
         user_choice = self.values[0].lower()
         user_choice_index = choices[user_choice]
@@ -100,7 +100,13 @@ class Names(disnake.ui.Select):
 Учиться в школе он в состоянии, как на отлично, так и посредственно, что обусловлено неустойчивостью нрава, сочетанием противоположных качеств.."
             result_embed.colour = 0xFFFF00
         elif user_choice_index == 5:
-            result_embed.description = "**Мужское имя Владимир**\n"
+            result_embed.description = "**Мужское имя Владимир**\nВладимир по своему психотипу – интроверт, но, если его вывести из себя, \
+то он становится злым, агрессивным и неуправляемым, хотя и ненадолго, выплеснув порцию негатива, он очень быстро успокаивается. \
+Носители имени любознательны и умны, они генерируют новыми идеями и если что-то задумали, то их сложно удержать. Владимиры - \
+большие аккуратисты, всегда чисто и опрятно выглядят. Очень любят порядок абсолютно во всем и не приемлют окружающего хаоса. \
+Владимиры очень зависимы от мнения окружения, всегда пытаются произвести хорошее впечатление, им важна постоянная похвала и поддержка. \
+Владимир стремится всегда и во всем быть образцом и примером для подражания. Любую критику в свой адрес переживает крайне тяжело и очень \
+страдает от этого, хотя внешне пытается этого не показывать."
             result_embed.colour = 0xFFFF00
         elif user_choice_index == 6:
             result_embed.description = "**Мужское имя Владислав**\n"
@@ -121,7 +127,7 @@ class Names(disnake.ui.Select):
             result_embed.description = "**Мужское имя Леонид**\n"
             result_embed.colour = 0xFFFF00
         elif user_choice_index == 12:
-            result_embed.description = "**Мужское имя Темирхан**\n"
+            result_embed.description = "**Мужское имя Тимур**\nПездец такой ебанути пчелик. Если у вас есть такой друг, удолите его нахуи."
             result_embed.colour = 0xFFFF00
         await interaction.response.defer()
         await interaction.edit_original_message(embed=result_embed, content=None, view=None)
