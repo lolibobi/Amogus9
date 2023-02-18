@@ -70,19 +70,19 @@ class Test(commands.Cog, name="test-normal"):
         
         if vopros == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
-                name = ,
+                name = vopros,
                 description="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
         if vopros == vopros2 and button.choise == cancel:
             embed = disnake.Embed(
-                name = ,
+                name = vopros,
                 description ="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
         else:
             embed = disnake.Embed(
-                name = ,
+                name = vopros,
                 description ="`{result2}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0xE02B2B
             )
