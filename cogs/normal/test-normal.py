@@ -51,7 +51,7 @@ class Test(commands.Cog, name="test-normal"):
     )
     @checks.not_blacklisted()
     async def questions(self, context: Context) -> None:
-        vopros = random.option
+        vopros = disnake.Questions
         
         await context.send({vopros})
         
