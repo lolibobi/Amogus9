@@ -50,7 +50,7 @@ class Test(commands.Cog, name="test-normal"):
         descpiption="Амогус задаст тебе вопрос"
     )
     @checks.not_blacklisted()
-    async def questions(self, context: Context) -> None:
+    async def вопос(self, context: Context) -> None:
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
         vopros = random.choice(vopros1, vopros2)   
@@ -66,17 +66,17 @@ class Test(commands.Cog, name="test-normal"):
         result1 = ["Ответ верный. Маладец. Держи cockфетку."]
         result2 = ["неверно"]
         
-    if random.choise == vopros1 and button.choise == confirm:
+        if random.choise == vopros1 and button.choise == confirm:
         embed = disnake.Embed(
                 description= {result1},
                 color=0x9C84EF
         )
-    if random.choise == vopros2 and button.choise == cancel:
+        if random.choise == vopros2 and button.choise == cancel:
             embed = disnake.Embed(
                 description = {result1},
                 color=0x9C84EF
         )
-    else:
+        else:
         embed = disnake.Embed(
                 description = {result2},
                 color=0xE02B2B
