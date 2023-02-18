@@ -7,7 +7,7 @@ from disnake.ext.commands import Context
 
 from helpers import checks
 
-class Alisa(commands.Cog, name="alisa-normal"):
+class Test(commands.Cog, name="test-slash"):
     def __init__(self, bot):
         self.bot = bot
         
