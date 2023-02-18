@@ -110,6 +110,10 @@ class NamesView(disnake.ui.View):
 
         self.add_item(Names())
         
+class Alisa(commands.Cog, name="alisa-normal"):
+    def __init__(self, bot):
+        self.bot = bot
+        
     @commands.command(
         name="имя",
         descriotion="Пояснит за тваё имя"
@@ -120,10 +124,6 @@ class NamesView(disnake.ui.View):
         view = NamesView()
         await context.send("Выбери имя ~~своего краша~~", view=view)
     
-
-class Alisa(commands.Cog, name="alisa-normal"):
-    def __init__(self, bot):
-        self.bot = bot
-
+    
 def setup(bot):
     bot.add_cog(Alisa(bot))
