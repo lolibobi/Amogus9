@@ -51,7 +51,7 @@ class Test(commands.Cog, name="test-normal"):
     )
     @checks.not_blacklisted()
     async def questions(self, context: Context) -> None:
-        choices = random.options
+        choices = random.randit(options)
         
         bot_choice = choices
         bot_choice_index = choices[bot_choice]
