@@ -57,7 +57,7 @@ class Test(commands.Cog, name="test-normal"):
         
         vopros = bot_choice
         
-        await context.send({vopros})
+        await context.send(vopros)
         
 def setup(bot):
     bot.add_cog(Test(bot))
