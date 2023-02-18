@@ -68,17 +68,17 @@ class Test(commands.Cog, name="test-normal"):
         
         if vopros == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
-                description= result1,
+                description= **vopros**\nresult1,
                 color=0x9C84EF
         )
         if vopros == vopros2 and button.choise == cancel:
             embed = disnake.Embed(
-                description = result1,
+                description = **vopros**\nresult1,
                 color=0x9C84EF
         )
         else:
             embed = disnake.Embed(
-                description = result2,
+                description = **vopros**\nresult2,
                 color=0xE02B2B
         )
         await message.edit(embed=embed, view=None)
