@@ -52,7 +52,7 @@ class Test(commands.Cog, name="test-normal"):
     @checks.not_blacklisted()
     async def questions(self, context: Context) -> None:
         options = ["Ты сус?", "Я сус?", "Тимур сус?"]
-        choices = random.randint(options: 0, 2)   
+        choices = random.choice(options)   
         bot_choice = choices
         
         vopros = bot_choice
