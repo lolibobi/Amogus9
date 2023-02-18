@@ -53,7 +53,7 @@ class Test(commands.Cog, name="test-normal"):
     async def вопос(self, context: Context) -> None:
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
-        vopros = random.choice(vopros1, vopros2)   
+        vopros = random.choice(vopros1 or vopros2)   
         
         buttons = Choice()
         embed = disnake.Embed(
