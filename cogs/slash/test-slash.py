@@ -23,7 +23,7 @@ class Choice(disnake.ui.View):
         self.choice = button.label.lower()
         self.stop()
         
-class Questions(self, context: Context):
+class Questions(disnake.ui.Select):
     def __init__(self):
         
         options = ["Ты сус?", "Я сус?", "Тимур сус?"]
