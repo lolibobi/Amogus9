@@ -50,7 +50,7 @@ class Test(commands.Cog, name="test-normal"):
         descpiption="Амогус задаст тебе вопрос"
     )
     @checks.not_blacklisted()
-    async def вопрос(self, context: Context) -> None:
+    async def вопрос(self, context: Context, interaction: disnake.MessageInteraction) -> None:
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
         vopros = random.choice(vopros1 or vopros2)   
@@ -61,26 +61,28 @@ class Test(commands.Cog, name="test-normal"):
                 description=vopros,
                 color=0x9C84EF
         )
-        message = await context.send(embed=embed, view=buttons, interaction: disnake.MessageInteraction)
+        message = await context.send(embed=embed, view=buttons)
         await buttons.wait()
         result1 = "Ответ верный. Маладец. Держи cockфетку."
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
         
+        disnake.embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
+        
         if vopros == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
-                name = interaction.author.display_name, icon_url=interaction.author.avatar.url,
+                name = ,
                 description="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
         if vopros == vopros2 and button.choise == cancel:
             embed = disnake.Embed(
-                name = interaction.author.display_name, icon_url=interaction.author.avatar.url,
+                name = ,
                 description ="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
         else:
             embed = disnake.Embed(
-                name = interaction.author.display_name, icon_url=interaction.author.avatar.url,
+                name = ,
                 description ="`{result2}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0xE02B2B
             )
