@@ -46,7 +46,7 @@ class Test(commands.Cog, name="test-slash"):
         self.bot = bot
 
     @commands.command(
-        name="вопрос"
+        name="вопрос",
         descpiption="Амогус задаст тебе вопрос"
     )
     @checks.not_blacklisted()
