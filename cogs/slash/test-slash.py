@@ -8,7 +8,7 @@ from disnake.ext.commands import Context
 from helpers import checks
 
 
-class Choice(disnake.ui.View)
+class Choice(disnake.ui.View):
     def __init__(self):
         super().__init__()
         self.choice = None
