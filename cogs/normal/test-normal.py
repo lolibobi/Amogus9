@@ -51,8 +51,9 @@ class Test(commands.Cog, name="test-normal"):
     )
     @checks.not_blacklisted()
     async def questions(self, context: Context) -> None:
+        vopros = random.option
         
-        await context.send({bot_choice})
+        await context.send({vopros})
         
 def setup(bot):
     bot.add_cog(Test(bot))
