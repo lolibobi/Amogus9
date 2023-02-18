@@ -63,12 +63,12 @@ class Test(commands.Cog, name="test-normal"):
         )
         message = await context.send(embed=embed, view=buttons)
         await buttons.wait()
-        result1 = ["Ответ верный. Маладец. Держи cockфетку."]
-        result2 = ["неверно"]
+        result1 = Ответ верный. Маладец. Держи cockфетку.
+        result2 = Неверный ответ!!! Заебошу тяяяя!
         
         if vopros == vopros1 and button.choise == confirm:
             embed = disnake.Embed(
-                description= {result1},
+                description= result1,
                 color=0x9C84EF
         )
         if vopros == vopros2 and button.choise == cancel:
@@ -81,7 +81,7 @@ class Test(commands.Cog, name="test-normal"):
                 description = result2,
                 color=0xE02B2B
         )
-        await context.send(embed=embed)
+        await message.edit(embed=embed, view=None)
             
             
 def setup(bot):
