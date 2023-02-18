@@ -50,7 +50,7 @@ class Test(commands.Cog, name="test-normal"):
         descpiption="Амогус задаст тебе вопрос"
     )
     @checks.not_blacklisted()
-    async def вопрос(self, context: Context) -> None:
+    async def questions(self, context: Context) -> None:
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
         vopros = random.choice(vopros1, vopros2)   
