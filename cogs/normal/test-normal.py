@@ -50,7 +50,7 @@ class Test(commands.Cog, name="test-normal"):
         descpiption="Амогус задаст тебе вопрос"
     )
     @checks.not_blacklisted()
-    async def вопрос(self, context: Context, interaction: disnake.MessageInteraction) -> None:
+    async def вопрос(self, context: Context) -> None:
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
         vopros = random.choice(vopros1 or vopros2)   
@@ -61,7 +61,7 @@ class Test(commands.Cog, name="test-normal"):
                 description=vopros,
                 color=0x9C84EF
         )
-        message = await context.send(embed=embed, view=buttons)
+        message = await context.send(embed=embed, view=buttons, interaction: disnake.MessageInteraction)
         await buttons.wait()
         result1 = "Ответ верный. Маладец. Держи cockфетку."
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
