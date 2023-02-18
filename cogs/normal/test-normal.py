@@ -29,7 +29,7 @@ class Questions(disnake.ui.Select):
         options = ["Ты сус?", "Я сус?", "Тимур сус?"]
         
     async def callback(self, interaction: disnake.MessageInteraction):
-        choices = random.options
+        choices = random.randit(choices)
         
         bot_choice = choices
         bot_choice_index = choices[bot_choice]
