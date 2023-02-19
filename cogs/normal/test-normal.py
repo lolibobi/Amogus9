@@ -56,6 +56,7 @@ class Test(commands.Cog, name="test-normal"):
         vopros = random.choice(vopros1 or vopros2)   
         
         buttons = Choice()
+        author = context.guild.members
         embed = disnake.Embed(
                 description="**Вапросик**\n `{vopros}`",
                 color=0x9C84EF
