@@ -56,7 +56,7 @@ class Test(commands.Cog, name="test-normal"):
         vopros = random.choice(vopros1 or vopros2)   
         
         buttons = Choice()
-        embed.title(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
+        embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
         embed = disnake.Embed(
                 description="**Вапросик**\n `{vopros}`",
                 color=0x9C84EF
@@ -81,7 +81,8 @@ class Test(commands.Cog, name="test-normal"):
                 description ="`{result2}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0xE02B2B
             )
-        await message.edit(embed=embed, view=None,)
+        await interaction.response.defer()
+        await interaction.edit_original_message(embed=result_embed, content=None, view=None)
             
             
 def setup(bot):
