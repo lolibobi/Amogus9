@@ -13,7 +13,7 @@ class Choice(disnake.ui.View):
         super().__init__()
         self.choice = None
 
-    @disnake.ui.button(label="Орёль", style=disnake.ButtonStyle.blurple)
+    @disnake.ui.button(label="Орёль", style=disnake.ButtonStyle.danger)
     async def confirm(self, button: disnake.ui.Button, interaction: disnake.MessageInteraction):
         self.choice = button.label.lower()
         self.stop()
