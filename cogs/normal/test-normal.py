@@ -67,7 +67,7 @@ class Test(commands.Cog, name="test-normal"):
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
          
         if vopros == vopros1 and button.choise == confirm:
-            embed = disnake.Embed(l
+            embed = disnake.Embed(
                 description="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
