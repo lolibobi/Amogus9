@@ -13,13 +13,14 @@ class Test(commands.Cog, name="test-normal"):
     def __init__(self, bot):
         self.bot = bot
         
-        
+class Button(disnake.Button)  
+
 @commands.command(
     name="тест",
     description="aaaa"
 )
 @checks.not_blacklisted()
-async disnake.Button(url="https://www.youtube.com/"):
+async Button(url="https://www.youtube.com/") -> None:
     await context.send("Ссылочка на юбубер")
     
 
