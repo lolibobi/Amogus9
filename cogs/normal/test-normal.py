@@ -61,8 +61,8 @@ class Test(commands.Cog, name="test-normal"):
                 description="**Вапросик**\n `{vopros}`",
                 color=0x9C84EF
         )
-        embed.set_author(name=message.author.display_name, icon_url=message.author.avatar.url)
         message = await context.send(embed=embed, view=buttons)
+        embed.set_author(name=message.author.display_name, icon_url=message.author.avatar.url)
         await buttons.wait()
         result1 = "Ответ верный. Маладец. Держи cockфетку."
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
