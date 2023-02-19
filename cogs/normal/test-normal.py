@@ -54,10 +54,10 @@ class Test(commands.Cog, name="test-normal"):
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
         vopros = random.choice(vopros1 or vopros2)   
+        embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
         
         buttons = Choice()
         embed = disnake.Embed(
-                name=interaction.author.display_name, icon_url=interaction.author.avatar.url,
                 description="**Вапросик**\n `{vopros}`",
                 color=0x9C84EF
         )
@@ -67,24 +67,21 @@ class Test(commands.Cog, name="test-normal"):
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
          
         if vopros == vopros1 and button.choise == confirm:
-            embed = disnake.Embed(
-                name=interaction.author.display_name, icon_url=interaction.author.avatar.url
+            embed = disnake.Embed(l
                 description="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
         if vopros == vopros2 and button.choise == cancel:
             embed = disnake.Embed(
-                name=interaction.author.display_name, icon_url=interaction.author.avatar.url
                 description ="`{result1}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0x5FFC00
             )
         else:
             embed = disnake.Embed(
-                name=interaction.author.display_name, icon_url=interaction.author.avatar.url
                 description ="`{result2}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0xE02B2B
             )
-        await message.edit(embed=embed, view=None)
+        await message.edit(embed=embed, view=None,)
             
             
 def setup(bot):
