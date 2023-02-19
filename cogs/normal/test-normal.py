@@ -84,7 +84,6 @@ class Test(commands.Cog, name="test-normal"):
                 description ="`{result2}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0xE02B2B
             )
-        await response.defer()
         await edit_original_message(embed=embed, content=None, view=None)
             
             
