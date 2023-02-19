@@ -42,7 +42,7 @@ class Questions(disnake.ui.Select):
         await interaction.edit_original_message(embed=result_embed, content=None, view=None)
            
 class Test(commands.Cog, name="test-normal"):
-    def __init__(self):
+    def __init__(self, bot):
         self.bot = bot
 
     @commands.command(
