@@ -51,9 +51,9 @@ class Test(commands.Cog, name="test-normal"):
     )
     @checks.not_blacklisted()
     async def вопрос(self, context: Context) -> None:
-        vopros1 = ["Тимур сус?"]
-        vopros2 = ["Я сус?", "Алиса сус?"]
-        vopros = vopros1 or vopros2
+        vopros1 = "Тимур сус?"
+        vopros2 = "Я сус?", "Алиса сус?"
+        vopros = random(vopros1 or vopros2)
         
         buttons = Choice()
         embed = disnake.Embed(
