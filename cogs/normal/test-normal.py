@@ -60,7 +60,6 @@ class Test(commands.Cog, name="test-normal"):
                 description="**Вапросик**\n `{vopros}`",
                 color=0x9C84EF
         )
-    async def вопрос(self, interaction: disnake.MessageInteraction):
         embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
         message = await context.send(embed=embed, view=buttons)
         await buttons.wait()
