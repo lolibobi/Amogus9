@@ -54,13 +54,13 @@ class Test(commands.Cog, name="test-normal"):
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
         vopros = random.choice(vopros1 or vopros2)   
-        embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
         
         buttons = Choice()
         embed = disnake.Embed(
                 description="**Вапросик**\n `{vopros}`",
                 color=0x9C84EF
         )
+        embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
         message = await context.send(embed=embed, view=buttons)
         await buttons.wait()
         result1 = "Ответ верный. Маладец. Держи cockфетку."
