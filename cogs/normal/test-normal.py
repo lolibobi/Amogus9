@@ -66,13 +66,13 @@ class Test(commands.Cog, name="test-normal"):
         result1 = "Ответ верный. Маладец. Держи cockфетку."
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
          
-        if vopros == vopros1 and buttons.choise == confirm:
+        if vopros == vopros1 and buttons.choice == confirm:
             embed = disnake.Embed(
                 title="Вапросик",
                 description= result1,
                 color=0x5FFC00
             )
-        if vopros == vopros2 and buttons.choise == cancel:
+        if vopros == vopros2 and buttons.choice == cancel:
             embed = disnake.Embed(
                 title="Вапросик",
                 description=result1,
