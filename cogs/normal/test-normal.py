@@ -23,7 +23,7 @@ class Choice(disnake.ui.View):
         self.choice = button.label.lower()
         self.stop()
         
-class Questions(disnake.ui.List):
+class Questions(disnake.ui.Select):
     def __init__(self):
         
         options = ["Ты сус?", "Я сус?", "Тимур сус?"]
@@ -66,13 +66,13 @@ class Test(commands.Cog, name="test-normal"):
         result1 = "Ответ верный. Маладец. Держи cockфетку."
         result2 = "Неверный ответ!!! Заебошу тяяяя!"
          
-        if vopros == vopros1:
+        if vopros == vopros1 and buttons.choice == buttons.confirm:
             embed = disnake.Embed(
                 title="Вапросик",
                 description= result1,
                 color=0x5FFC00
             )
-        if vopros == vopros2:
+        elif vopros == vopros2 and buttons.choice == buttons.cancel:
             embed = disnake.Embed(
                 title="Вапросик",
                 description=result1,
