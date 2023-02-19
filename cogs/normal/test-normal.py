@@ -58,7 +58,7 @@ class Test(commands.Cog, name="test-normal"):
         buttons = Choice()
         author = context.guild.members
         embed = disnake.Embed(
-                description="**Вапросик**\n `vopros`",
+                description="**Вапросик**\n" vopros,
                 color=0x9C84EF
         )
         message = await context.send(embed=embed, view=buttons)
@@ -82,8 +82,8 @@ class Test(commands.Cog, name="test-normal"):
                 description ="`{result2}`, вопрос был: `{vopros}`, твой ответ был:`{button.choise}`",
                 color=0xE02B2B
             )
-        await interaction.response.defer()
-        await interaction.edit_original_message(embed=embed, content=None, view=None)
+        await response.defer()
+        await edit_original_message(embed=embed, content=None, view=None)
             
             
 def setup(bot):
