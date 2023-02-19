@@ -50,7 +50,7 @@ class Test(commands.Cog, name="test-normal"):
         descpiption="Амогус задаст тебе вопрос"
     )
     @checks.not_blacklisted()
-    async def вопрос(self, context: Context, interaction=disnake.MessageInteraction):
+    async def вопрос(self, context: Context):
         vopros1 = ["Тимур сус?"]
         vopros2 = ["Я сус?", "Алиса сус?"]
         vopros = random.choice(vopros1 or vopros2)   
@@ -60,7 +60,7 @@ class Test(commands.Cog, name="test-normal"):
                 description="**Вапросик**\n `{vopros}`",
                 color=0x9C84EF
         )
-        embed.set_author(name=interaction.author.display_name, icon_url=interaction.author.avatar.url)
+        embed.set_author(name=author.display_name, icon_url=author.avatar.url)
         message = await context.send(embed=embed, view=buttons)
         await buttons.wait()
         result1 = "Ответ верный. Маладец. Держи cockфетку."
@@ -82,7 +82,7 @@ class Test(commands.Cog, name="test-normal"):
                 color=0xE02B2B
             )
         await interaction.response.defer()
-        await interaction.edit_original_message(embed=result_embed, content=None, view=None)
+        await interaction.edit_original_message(embed=embed, content=None, view=None)
             
             
 def setup(bot):
