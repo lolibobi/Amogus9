@@ -1,5 +1,11 @@
+import disnake
+from disnake.ext import commands
+from disnake.ext.commands import Context
 import youtube_dl
 import asyncio
+
+
+from youtube_dl import YoutubeDL
 
 class Haha(commands.Cog, name="haha"):
     def __init__(self, bot):
