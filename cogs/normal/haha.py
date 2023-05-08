@@ -7,9 +7,9 @@ class Haha(commands.Cog, name="haha"):
     def __init__(self, bot):
         self.bot = bot
 
-# Обработчик команды "!play"
+# Обработчик команды ";music"
     @bot.command()
-    async def play(ctx, url):
+    async def music(ctx, url):
         # Проверяем, находится ли автор команды в голосовом канале
         if ctx.author.voice is None:
             await ctx.send("Вы должны находиться в голосовом канале, чтобы использовать эту команду.")
