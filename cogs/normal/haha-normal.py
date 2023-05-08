@@ -1,13 +1,11 @@
+from ast import alias
 import disnake
 from disnake.ext import commands
 from disnake.ext.commands import Context
-import youtube_dl
-import asyncio
-
 
 from youtube_dl import YoutubeDL
 
-class Haha(commands.Cog, name="haha"):
+class Haha(commands.Cog, name="haha-normal"):
     def __init__(self, bot):
         self.bot = bot
 
