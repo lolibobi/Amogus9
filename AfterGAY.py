@@ -84,12 +84,13 @@ async def status_task() -> None:
     """
     Установить статус игры
     """
-    statuses = ["пездец", "хуню", "Heydi is SUS!", "Трах нест",
-    "амосус", "сус", "гей пати", "чин чан чон чи", "смысл бытия",
-    "жизнь", "в доме", "в сарае", "в дурке", "блять что еще написать сюда",
-    "лан все, я заебался"]
-    #await bot.change_presence(activity=disnake.Game(random.choice(statuses)))
-    await bot.change_presence(activity=disnake.Activity(type=disnake.ActivityType.listening, name=random.choice(statuses)))
+    #statuses = ["пездец", "хуню", "Heydi is SUS!", "Трах нест",
+    #"амосус", "сус", "гей пати", "чин чан чон чи", "смысл бытия",
+    #"жизнь", "в доме", "в сарае", "в дурке", "блять что еще написать сюда",
+    #"лан все, я заебался"]
+    statuses = ["Genshin Impact"]
+    await bot.change_presence(activity=disnake.Game(random.choice(statuses)))
+    #await bot.change_presence(activity=disnake.Activity(type=disnake.ActivityType.listening, name=random.choice(statuses)))
 
 
 def load_commands(command_type: str) -> None:
