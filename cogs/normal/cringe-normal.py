@@ -20,7 +20,7 @@ class Cringe(commands.Cog, name="cringe-normal"):
     )
     @checks.not_blacklisted()
     async def амогус(self, context: Context) -> None:
-        timur_id = 1040144202387959809
+        timur_id = 444421622938730506
         timur = disnake.utils.find(
             lambda m: m.id == timur_id, context.guild.members)
         kok_id = 369495810146172938
