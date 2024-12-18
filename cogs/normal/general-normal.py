@@ -330,22 +330,23 @@ class General(commands.Cog, name="general-normal"):
     @checks.not_blacklisted()
     async def биток(self, context: Context) -> None:
 
-        async with aiohttp.ClientSession() as session:
-            async with session.get("https://api.coindesk.com/v1/bpi/currentprice/BTC.json") as request:
-                if request.status == 200:
-                    data = await request.json(
-                        content_type="application/javascript")  # возвращаемое содержимое имеет тип JavaScript
-                    embed = disnake.Embed(
-                        title="Bitcoin price",
-                        description=f"Фиксируем прибыль, курс биточка {data['bpi']['USD']['rate_float']} долларс :dollar:",
-                        color=0x9C84EF
-                    )
-                else:
-                    embed = disnake.Embed(
-                        title="Ошибка!",
-                        description="API-шке хуева, перезвоните позже",
-                        color=0xE02B2B
-                    )
-                await context.send(embed=embed)
+        await context.send('леееееее')
+#        async with aiohttp.ClientSession() as session:
+#            async with session.get("https://api.coindesk.com/v1/bpi/currentprice/BTC.json") as request:
+#                if request.status == 200:
+#                    data = await request.json(
+#                        content_type="application/javascript")  # возвращаемое содержимое имеет тип JavaScript
+#                    embed = disnake.Embed(
+#                        title="Bitcoin price",
+#                        description=f"Фиксируем прибыль, курс биточка {data['bpi']['USD']['rate_float']} долларс :dollar:",
+#                        color=0x9C84EF
+#                    )
+#                else:
+#                    embed = disnake.Embed(
+#                        title="Ошибка!",
+#                        description="API-шке хуева, перезвоните позже",
+#                        color=0xE02B2B
+#                    )
+#                await context.send(embed=embed)
 def setup(bot):
     bot.add_cog(General(bot))
