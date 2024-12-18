@@ -337,7 +337,7 @@ class General(commands.Cog, name="general-normal"):
                         content_type="application/javascript")  # возвращаемое содержимое имеет тип JavaScript
                     embed = disnake.Embed(
                         title="Bitcoin price",
-                        description=f"Фиксируем прибыль, курс биточка {data['bpi']['USD']['rate']} долларс :dollar:",
+                        description=f"Фиксируем прибыль, курс биточка {data['bpi']['USD']['rate_float']} долларс :dollar:",
                         color=0x9C84EF
                     )
                 else:
